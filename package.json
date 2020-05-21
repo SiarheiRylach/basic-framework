@@ -1,0 +1,26 @@
+{
+  "name": "basic-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "e2e": "node_modules/.bin/protractor protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiarheiRylach/basic-framework.git"
+  },
+  "author": "Siarhei Rylach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiarheiRylach/basic-framework/issues"
+  },
+  "homepage": "https://github.com/SiarheiRylach/basic-framework#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1"
+  }
+}
