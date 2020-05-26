@@ -7,6 +7,9 @@ exports.config = {
     baseUrl: 'https://formy-project.herokuapp.com',
     capabilities: {
         browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: ['-safe-mode']
+        },
         platform: "Windows 10",
         maxDuration: 10800
     },
@@ -15,6 +18,7 @@ exports.config = {
     ],
     onPrepare: function () {
         browser.waitForAngularEnabled(false);
+        browser.driver.manage().window().setSize(1680,1050);
     },
 
     cucumberOpts: {
