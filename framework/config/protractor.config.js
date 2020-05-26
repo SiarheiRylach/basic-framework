@@ -6,10 +6,7 @@ exports.config = {
     directConnect: true,
     baseUrl: 'https://formy-project.herokuapp.com',
     capabilities: {
-        browserName: 'chrome',
-        chromeOptions: {
-            args: ['--window-size=1680,1050', '--disable-notifications', '--disable-infobars']
-        },
+        browserName: 'firefox',
         platform: "Windows 10",
         maxDuration: 10800
     },
