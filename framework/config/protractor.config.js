@@ -6,18 +6,19 @@ exports.config = {
     directConnect: true,
     baseUrl: 'https://formy-project.herokuapp.com',
     capabilities: {
-        browserName: 'chrome',
-        chromeOptions: {
-            args: ['--window-size=1680,1050', '--disable-notifications', '--disable-infobars']
+        browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: ['-safe-mode']
         },
         platform: "Windows 10",
         maxDuration: 10800
     },
     specs: [
-        './features/*.feature'
+        path.resolve('./features/*.feature')
     ],
     onPrepare: function () {
         browser.waitForAngularEnabled(false);
+        browser.driver.manage().window().setSize(1920, 1080);
     },
 
     cucumberOpts: {
@@ -25,7 +26,7 @@ exports.config = {
             path.resolve('./framework/step_definitions/**.js'),
             path.resolve('./framework/support/world.js')
         ],
-        format: ['json:log.json'],
+        format: ['json:cucumber.json'],
         tags: []
     },
     allScriptsTimeout: 60 * 1e3,
