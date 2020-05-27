@@ -51,6 +51,3 @@ Feature: Complete Web Form verification
     | index | first name | last name   | job title                 | date       |
     | 1     | Valeryia   | Budzinskaya | Sofrware testing engineer | 05/21/2020 |
     | 2     | Ivan       | Ivanov      | Developer                 | 05/22/2020 |
-  
-
-
