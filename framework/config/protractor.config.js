@@ -18,7 +18,7 @@ exports.config = {
     ],
     onPrepare: function () {
         browser.waitForAngularEnabled(false);
-        browser.driver.manage().window().setSize(1920, 1080);
+        browser.driver.manage().window().setSize(1680,1050);
     },
 
     cucumberOpts: {
